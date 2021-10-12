@@ -1,0 +1,473 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;800&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,400;0,600;1,800&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+}
+
+header{
+   
+    width: 100%;
+    height: 50vh;
+    background-image: url(./icon/desk-593327_1920.jpeg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    
+}
+
+nav{
+    height: 100px;
+    width: 100%;
+    display: flex; /* unificar todo en el nav en contenido de todo*/
+    justify-content: space-between ;
+    align-items: center;
+    position: fixed;
+    /*border: solid 2px red;
+    background-color: #ff5d4c;;
+    
+    transition: background-color .5s ease,transform .3s ease-out;
+    transition-property: background-color, transform;
+    transition-duration: 0.5s, 0.3s;
+    transition-timing-function: ease, ease-out;
+    transition-delay: 0s, 0s;*/
+}
+
+nav{
+    background-color: rgba(0, 0, 0, 0.30);
+}
+
+.logo{
+    width: 90px;
+    margin-left: 20px; /* separacion del lado izquierdo.*/
+}
+
+.bar-btn{
+    font-size: 25px;
+    color: white;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.nav-menu{  /*Estoy dando estilo a los ul*/
+    position: fixed;
+    width: 100%; /*lo pongo un 100 por ciento a lo ancho*/
+    height: 0vh; /*lo pongo un 100 por a lo largo del nav*/
+    top: 100px; /* le doy un espacio de arriba hasta los px necesarios*/
+    background: rgba(0, 0, 0, .77); /*coloco un color negro tranparente*/
+    text-align: center; /*Centro las letras que contiene los LI*/
+    transition: .5s; /*Le doy una transision de .5 segundos */
+}
+
+.nav-menu li{
+    display: none;
+    line-height: 30px; /*Dar un espaciado entre los li, para no dejarlos juntos*/
+    margin: 50px 0; /* un margen del espaciado necesario */
+    transition: all .5s;
+}
+
+
+
+.nav-menu li a{
+    color:  #fff;
+    font-size: 15px;
+    text-transform: uppercase; /*Fuerza a que todo quede en mayuscula*/
+    font-weight: 600; /*Grosor de las letras*/
+
+}
+
+.nav-menu li a.active, .nav-menu li a:hover{
+    color: rgb(248, 8,8);
+    transition: .3s;
+}
+
+#check{
+    visibility: hidden; /*Ocultamos el boton checkBox*/
+}
+
+#check:checked ~ .nav-menu{
+    /*Usamos la pseudo clase checked para mostras u ocultar el menu resposivo cada vez que
+    se le de click en el icono de menu*/
+    height: 100vh;
+}
+
+#check:checked ~ .nav-menu li {
+    display:block
+}
+
+.content-section{
+    
+    padding: 2rem;
+    width: 100%;
+    height: 93vh;
+    
+    
+}
+
+h1{
+   
+    font-size: 1.7rem;
+    text-align: center;
+    opacity: .55;
+}
+
+.social-media > div img{
+    width: 67.66px;
+    height: 59px; /**/
+    margin-left: auto; /* realizo el proceso para centrar la imagen*/
+    margin-right: auto; /*con este le doy e toque centrado*/
+}
+
+
+.social-media{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.social-media > div h2{
+    font-size: 0.90rem;
+    
+}
+
+.social-media > div{
+    padding: 1rem;
+    height: 100px;
+    display: flex;
+    flex-direction: column;
+    box-shadow:  5px 5px 20px 10px rgba(0, 0, 0, 0.1);
+    background-color: #ffffff;
+    border-radius: .75rem;
+    margin: .50rem 0;
+    cursor: pointer;
+}
+
+
+
+
+.personal h2{
+    text-align: center;
+    font-size: 3rem;
+    padding: 1rem;
+    
+}
+
+.personal p{
+    text-align: center;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+
+.formulario{
+    padding: 2rem;
+    margin: 1.50rem 1.50rem  1.50rem 1.50rem;
+    border: 1px  #888;
+    box-shadow:  5px 5px 20px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 1rem;
+}
+
+
+
+.formulario h2 {
+    padding: 1rem;
+    text-align: center;
+    font-size: 2em;
+    font-family: 'Rubik', sans-serif;
+}
+
+
+.require{
+    font-family: 'Rubik', sans-serif;
+    color: #c1594b;
+}
+
+.for-label{
+    padding: .75rem;
+    font-family: 'Rubik', sans-serif;
+    font-size: .75rem;
+    color: #888;
+    display: block;
+    padding-bottom: 10px;
+}
+.form div input{
+    padding-top: .75rem;
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+    font-family: 'Rubik', sans-serif;
+    
+    font-weight: 300;
+    width: 100%;
+}
+
+#textarea{
+    
+    border: 1px solid #e2e2e2;
+    border-radius: 5px;
+    box-shadow: 0 1px 4px rgb(0 0 0 / 3%);
+    font-family: 'Rubik', sans-serif;
+    resize: none;
+    
+
+    width: 100%;
+}
+
+.label{
+    padding: .75rem;
+}
+
+.form .btn-enviar{
+    border-radius: 1rem;
+    box-shadow:  5px 5px 20px 10px rgba(0, 0, 0, 0.1);
+    background: #4b6cc1;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 1000px;
+    color: #fff;
+    display: inline-block;
+    font-family: 'Rubik', sans-serif;
+    font-size: .90rem;
+    font-weight: 500;
+    text-align: center;
+    cursor: pointer;
+}
+
+footer{
+    box-shadow:  5px 5px 20px 10px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background: #202020;
+    color: whitesmoke;
+}
+
+.container-footer-all{
+    width: 100%;
+    max-width: 1200px;
+    
+    margin: auto;
+    padding: 20px;
+}
+
+.container-body{
+    display: flex;
+    justify-content: space-between;
+}
+
+.colum1{
+    max-width: 400px;
+}
+
+.colum1 h1{
+    font-size: .95rem;
+}
+
+.colum1 p{
+    font-size: .67rem;
+    color: #c7c7c7;
+    margin-top: 20px;
+}
+
+
+.colum2{
+    max-width: 400px;
+    
+}
+
+.colum2 h1{
+    font-size: .95rem;
+}
+
+.colum2 .row{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row img{
+    width: 23px;
+    height: 23px;
+}
+
+.row label{
+    font-size: .75rem;
+    margin-top: 4px;
+    margin-left: 8px;
+    color: #c7c7c7;
+}
+
+.colum3{
+    max-width: 400px;
+    
+}
+
+.colum3 h1{
+    font-size: .95rem;
+   
+}
+
+
+.row2{
+    margin-top: 20px;
+    display: flex;
+}
+
+.row2 img{
+    width: 23px;
+    height: 23px;
+}
+
+.row2 label{
+    font-size: .75rem;
+    max-width: 160px;
+    margin-left: 8px;
+    color: #c7c7c7;
+}
+
+
+
+.container-footer{
+    width: 100%;   
+    background: #101010;
+    
+   
+}
+
+.footer-o{
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.copyright{
+    color: #c7c7c7;
+    font-size: .62rem;
+    font-weight: bold;
+}
+
+.information{
+    color: #c7c7c7;
+    font-size: .62rem;
+    font-weight: bold;
+}
+
+
+@media screen and (min-width: 768px) {
+    .logo{
+        margin-left: 60px;
+    }
+
+    .nav{
+        height: 100px;
+    }
+
+    .bar-btn{
+        display: none;
+    }
+    .nav-menu{
+        position: relative;
+        height: 100px;
+        top: 0;
+        background: none;
+        transition: none;
+        text-align: right;
+        margin-right: 50px;
+
+    }
+
+    .nav-menu li {
+        display: inline-block;
+        line-height: 100px;
+        margin: 0 20px;
+        transition: none;
+    }
+
+    .nav-menu li a{
+        font-size: 12px;
+        color: white;
+    }   
+
+    body .formulario{
+        margin-left: auto; /* realizo el proceso para centrar la imagen*/
+        margin-right: auto;
+
+    }
+
+    .formulario{
+        width: 60%;
+        max-width: 700px;
+    }
+
+
+}
+
+@media only screen and (min-width: 992px){
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/*.social-media div::after{
+    content: "";
+    width: 100%;
+    height: 100%;
+    height: 0;
+    top: 0;
+    top: auto;
+    left: 0;
+    background-color: #ff5d4c;
+    opacity: 1;
+    position: absolute;
+    bottom: 0;
+    -webkit-transition: height .3s ease;
+    transition-property: height;
+    transition-duration: 0.3s;
+    transition-timing-function: ease;
+    transition-delay: 0s;
+}
+
+.social-media div::selection{
+    background-color: #ff5d4c;
+}*/
+
+
+
+/*.nav_item::after{
+    content: "";
+    display: block;
+    background: #fff;
+    width: 90%;
+    margin-top: 3px;
+    height: 3px;
+}*/
+
+/*.social-media{
+    border: solid 1px blue;
+    max-width: 500px;
+    height: 220px;
+    display: grid;
+    margin: 0 auto;
+    padding: .70rem;
+    grid-template-columns: 80px 80px ;
+    grid-template-rows: 80px 80px ;
+    grid-gap: 1.88rem;
+    justify-content:space-evenly;
+    
+}*/
