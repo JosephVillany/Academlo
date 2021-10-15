@@ -105,12 +105,10 @@ nav{
 }
 
 .content-section{
-    
-    padding: 2rem;
+
+    padding: 0.75rem;
     width: 100%;
-    height: 93vh;
-    
-    
+    height: auto;    
 }
 
 h1{
@@ -127,6 +125,9 @@ h1{
     margin-right: auto; /*con este le doy e toque centrado*/
 }
 
+.social-media > div > h2{
+    text-align: center;
+}
 
 .social-media{
     display: flex;
@@ -141,6 +142,7 @@ h1{
 
 .social-media > div{
     padding: 1rem;
+    width: 180px;
     height: 100px;
     display: flex;
     flex-direction: column;
@@ -151,13 +153,16 @@ h1{
     cursor: pointer;
 }
 
-
+.personal{
+    margin: 1rem 0 0 0;
+}
 
 
 .personal h2{
     text-align: center;
-    font-size: 3rem;
-    padding: 1rem;
+    font-size: 1.5rem;
+    padding: .55rem;
+    
     
 }
 
@@ -406,6 +411,20 @@ footer{
         max-width: 700px;
     }
 
+    .content-section .social-media{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-gap: 30px;
+        padding: 3rem;
+       /* flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;*/
+    }
+
+    .social-media > div{
+        justify-self: center;
+        
+    }
 
 }
 
