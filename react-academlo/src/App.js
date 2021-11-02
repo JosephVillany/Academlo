@@ -31,7 +31,7 @@ const App = () => {
   }, []);
 
   //FUNCIONES
-  const handleCompleteTodo = id => {
+  const handleCompleteTodo = (id, status) => {
     setTodoList(todoList.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo));
     setFiltro( filtro.map(todo => todo.id === id ? { ...todo, completed: !todo.completed } : todo));
   };
