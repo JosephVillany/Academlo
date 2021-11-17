@@ -12,7 +12,7 @@ const RepoCard = ({repoName, owner, repoPrivate})=>
             <h4>Name : {owner}</h4>
             <h4>{repoName}</h4>
             <h4>{repoPrivate?"Private": "Public"} </h4>
-            <a className="btn-repo" href={repoLink} target="_blank" >see more about this repo</a>
+            <a className="btn-repo" href={repoLink} target="_blank" rel="noreferrer" >see more about this repo</a>
         </div>
     )
 }

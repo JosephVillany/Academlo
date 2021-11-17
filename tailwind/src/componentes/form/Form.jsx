@@ -8,7 +8,7 @@ const Form = ({handleValue, handleSubmit}) => {
             <input className="border-t border-b border-l rounded-l-lg    shadow-xl  focus:ring-2 focus:ring-blue-600"
             onChange={( { target } )=>handleValue(target)}
             required="required"
-            type="text" placeholder="Search.." name="search" required={true} />
+            type="text" placeholder="Search.." name="search" />
             <button className="border-r border-t border-b rounded-r-lg shadow-lg  focus:ring-2 focus:ring-blue-600" type="submit"><i class="fa fa-search"></i></button>
         </form>
     )

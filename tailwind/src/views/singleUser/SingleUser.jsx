@@ -20,7 +20,7 @@ const SingleUser = () => {
       }
       requestApi()
 
-    }, [])
+    }, [userName])
     
     return (
         <div>

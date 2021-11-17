@@ -5,13 +5,12 @@ import "./Card.styles.css"
 
 const Card = (props) => {
 
-    const {userName, image, followers, 
-        followin, repositories} = props
-console.log(userName);
+    const {userName, image} = props
+
     return (
         <div className="card-container">
 
-            <img src={image} alt={`image of ${userName}`} />
+            <img src={image} alt={`${userName}`} />
             <h2>nombre {userName}</h2>
             <ul>
                 

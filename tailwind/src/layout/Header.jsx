@@ -23,13 +23,13 @@ const Header = ()=>{
         <div className={show ? "menuNav" : "notVisible"}>
                 <ul>
                     <li className="li" onClick={()=> navigate('/')}>
-                        <a class="fa fa-home"/><span>Home</span>
+                        Home
                     </li>
                     <li className="li" onClick={()=> navigate(- 1)}>
-                        <a href="#" class="previous round">&#8249;</a><span>Go Back</span>
+                       Go Back
                     </li>
                     <li className="li" onClick={()=> navigate(+ 1)}>
-                        <span className="onlySpan">Next</span><a href="#" class="next round">&#8250;</a>
+                        Next
                     </li>
                 </ul>
              </div>
